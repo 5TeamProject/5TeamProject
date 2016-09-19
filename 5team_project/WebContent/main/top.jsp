@@ -4,32 +4,55 @@
 <html>
 <head>
 	<title>top</title>
+	
 <style>
 
-body { margin: 0; }
-
-.zeta-menu-bar {
-position: fixed;
-  background: gray;
-  display: inline-block;
-  width: 100%;
+/* 메뉴바를 화면 맨끝에 붙여주는 역할 */
+body { 
+	margin: 0; 
 }
-.zeta-menu { margin: 0; padding: 0; }
-.zeta-menu li {
+
+/* 상단메뉴바 초기영역 */
+.menu-bar {
+position: fixed;
+background: gray;
+width: 5000000px;
+}
+
+/* 메뉴바 영역에서 리스트들을 구석에 붙여줌 */
+.menu { 
+	margin: 0; 
+	padding: 0; 
+}
+
+/* 메뉴바 내 리스트들을 가로로 정렬해줌 */
+.menu li {
   float: left;
   list-style:none;
   position: relative;
 }
-.zeta-menu li:hover { background: white; }
-.zeta-menu li:hover>a { color: gray; }
-.zeta-menu a {
+
+/* 마우스 내렸을때 큰메뉴의 배경색 */
+.menu li:hover {
+	background: white; 
+}
+
+/* 마우스 올렸을때 큰메뉴의 배경색 */
+.menu li:hover>a {
+	color: gray; 
+}
+
+/* 메뉴바 내 리스트들을 다음과 같이 정의해줌 */
+.menu a {
   color: white;
   display: block;
   padding: 10px 20px;
   text-decoration: none;
 }
-.zeta-menu ul {
-  background: #eee;
+
+/* 소메뉴 안 영역 */
+.menu ul {
+  background: white;
   border: 1px solid silver;
   display: none;
   padding: 0;
@@ -38,34 +61,27 @@ position: fixed;
   top: 100%;
   width: 180px;
 }
-.zeta-menu ul li { float: none; }
-.zeta-menu ul li:hover { background: #ddd; }
-.zeta-menu ul li:hover a { color: black; }
-.zeta-menu ul a { color: black; }
-.zeta-menu ul ul { left: 100%; top: 0; }
-.zeta-menu ul ul li {float:left; margin-right:10px;}
+
+/* 소메뉴 안 영역의 글씨 */
+.menu ul a { 
+	color: black; 
+}
 </style>
 
 <script src="//code.jquery.com/jquery.min.js"></script>
 <script>
 $(function(){
-  $(".zeta-menu li").hover(function(){
+  $(".menu li").hover(function(){
     $('ul:first',this).show();
   }, function(){
     $('ul:first',this).hide();
   });
-  $(".zeta-menu>li:has(ul)>a").each( function() {
-    $(this).html( $(this).html()+' &or;' );
-  });
-  $(".zeta-menu ul li:has(ul)")
-    .find("a:first")
-    .append("<p style='float:right;margin:-3px'>&#9656;</p>");
 });
 </script>
 </head>
 <body>
-   <div class='zeta-menu-bar'>
-  <ul class="zeta-menu">
+  <div class='menu-bar'>
+  <ul class="menu">
     <li><a href="#">게시판</a>
       <ul>
         <li><a href="#">공지사항</a></li>
