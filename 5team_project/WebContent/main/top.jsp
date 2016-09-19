@@ -16,7 +16,7 @@ body {
 .menu-bar {
 position: fixed;
 background: gray;
-width: 5000000px;
+width: 50000000px;
 }
 
 /* 메뉴바 영역에서 리스트들을 구석에 붙여줌 */
