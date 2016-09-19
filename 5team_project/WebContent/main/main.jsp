@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Main Page</title>
+<title>Study</title>
 </head>
 <body>
-	<h1> Start!!! </h1>
-	<h2> 교은이가 올린거</h2>
-	<h3> 나도 된다 </h3>
+<jsp:include page="top.jsp"></jsp:include>
+<jsp:include page="mid.jsp"></jsp:include>
+<jsp:include page="bottom.jsp"></jsp:include>
 </body>
 </html>
