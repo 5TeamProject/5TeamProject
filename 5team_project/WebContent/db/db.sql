@@ -58,6 +58,12 @@ create sequence replyboard_num
 	start with 1
 	nocache;
 	
+select * from STUDY_FREEBOARD;
+select * from STUDY_GONGBOARD;
+select * from STUDY_MEMBER;
+select * from STUDY_REPLYBOARD;
+select * from STUDY_ROOM;
+
 	select num, writer, email, subject, passwd, reg_date, readcount, ref, re_step, re_level, content, ip, r 
 	from(select num, writer, email, subject, passwd, reg_date, readcount, ref, re_step, re_level, content, ip, rownum r 
 		from(select num, writer, email, subject, passwd, reg_date, readcount, ref, re_step, re_level, content, ip 
