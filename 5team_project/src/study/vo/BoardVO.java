@@ -1,4 +1,4 @@
-package study.board;
+package study.vo;
 
 public class BoardVO {
 
